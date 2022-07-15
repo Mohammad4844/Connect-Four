@@ -1,6 +1,12 @@
 class Token
+  attr_reader :color
+
   def initialize(color = 'empty')
     @color = color
+  end
+
+  def ==(other)
+    self.color == other.color
   end
 
   def to_s
