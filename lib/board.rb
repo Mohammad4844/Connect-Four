@@ -64,10 +64,10 @@ class Board
   end
 
   def to_s
-    @grid.reduce("0 1 2 3 4 5 6\n") do |result, row|
+    @grid.reduce("\n\e[3m0 1 2 3 4 5 6\e[23m\n") do |result, row|  
       result + row.reduce('') do |row_result, token| 
         row_result + "#{token} " 
       end + "\n"
-    end 
+    end
   end
 end
